@@ -1,0 +1,54 @@
+
+[ 
+    {
+        "id":1,
+        "name":"Zidane",
+        "desc":"Leadership and management",
+        "social1":"../../assets/linkedin.png",
+        "social2":"../../assets/medium.png",
+        "social3":"../../assets/insta.svg",
+        "image":"../../assets/zidane.jpg"
+        
+    },
+    {
+        "id":2,
+        "name":"Toni Kroos",
+        "desc":"Product developer",
+        "social1":"../../assets/linkedin.png",
+        "social2":"../../assets/medium.png",
+        "social3":"../../assets/insta.svg",
+        "image":"../../assets/tonikroos.jpg"
+        
+    },
+    {
+        "id":3,
+        "name":"Iker Casillas",
+        "desc":"Marketing stratergy",
+        "social1":"../../assets/linkedin.png",
+        "social2":"../../assets/medium.png",
+        "social3":"../../assets/insta.svg",
+        "image":"../../assets/ikercasillas.jpg"
+        
+    },
+    {
+        "id":4,
+        "name":"James",
+        "desc":"Product designer",
+        "social1":"../../assets/linkedin.png",
+        "social2":"../../assets/medium.png",
+        "social3":"../../assets/insta.svg",
+        "image":"../../assets/james.jpg"
+        
+    },
+    {
+        "id":5,
+        "name":"Cristiano",
+        "desc":"Financial operations",
+        "social1":"../../assets/linkedin.png",
+        "social2":"../../assets/medium.png",
+        "social3":"../../assets/insta.svg",
+        "image":"../../assets/christiano.jpg"
+        
+    }
+   
+]

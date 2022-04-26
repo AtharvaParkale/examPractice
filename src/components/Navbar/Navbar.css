@@ -1,0 +1,65 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    height: 12vh;
+    padding-inline: 8vh;
+}
+
+.navSections {
+    /* border: 2px solid red; */
+    /* height: 100%; */
+}
+
+.navSections ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+}
+
+.navPages {
+    width: 450px;
+}
+
+.navSections li {
+    font-size: 18px;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* .navSections li:hover{
+    font-size: 20px;
+   
+} */
+.navProfile {
+    font-size: 19px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navProfile span {
+    padding: 1vh;
+}
+
+/* Specific styles for non-active links */
+.link {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    list-style: none;
+    transition: all 2s ease-in;
+}
+
+/* Specific styles for active links */
+.link-active {
+    color: black;
+    text-decoration: underline solid black 2px;
+    text-underline-offset: 8px;
+    text-decoration-thickness:2px;
+    /* background: orange; */
+}

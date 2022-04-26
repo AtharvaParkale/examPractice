@@ -1,0 +1,60 @@
+
+[ 
+    {
+        "id":1,
+        "name":"KSL 01",
+        "cost" : 2000,
+        "star":4,
+        "color":"red",
+        "image":"../../assets/shoe2.png"
+        
+    },
+    {
+        "id":2,
+        "name":"KSW 01",
+        "cost" : 8000,
+        "star":4,
+        "color":"blue",
+        "image":"../../assets/shoe.jpg"
+       
+    },
+    {
+        "id":3,
+        "name":"ROYAL S 01",
+        "cost" : 6000,
+        "star":3,
+        "color":"red",
+        "image":"../../assets/shoe2.png"
+        
+      
+    },
+    {
+        "id":4,
+        "name":"KSL 01",
+        "cost" : 3500,
+        "star":4,
+        "color":"blue",
+        "image":"../../assets/shoe.jpg"
+       
+       
+    }, 
+    {
+        "id":5,
+        "name":"KSW 01",
+        "cost" : 9000,
+        "star":4,
+        "color":"yellow",
+        "image":"../../assets/shoe2.png"
+       
+       
+    }, 
+    {
+        "id":6,
+        "name":"ROYAL S 01",
+        "cost" : 5500,
+        "star":5,
+        "color":"yellow",
+        "image":"../../assets/shoe.jpg"
+        
+    } 
+]

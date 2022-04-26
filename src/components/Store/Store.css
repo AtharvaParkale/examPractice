@@ -1,0 +1,413 @@
+.storeSection{
+    /* border: 2px solid blue; */
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.shoeInfo {
+    height: 90%;
+    /* border: 2px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.shoeInfo button{
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 1vh;
+    padding: 1vh;
+}
+.shoeInfo button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.filters{
+    width: 21%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.filters span{
+    font-weight: 500;
+    font-size: 19px;
+}
+.filters input{
+    margin-right: 1.7vh;
+    margin-top: 1vh;
+}
+
+.cart{
+    width: 21%;
+}
+.shoes{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+.filt_sections{
+    width: 80%;
+    margin: 0.7vh;
+}
+
+.filters_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.filters_header span{
+    font-size: 19px;
+}
+
+.filters_cost input[type="radio"]{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 20px;
+    height: 20px;
+    content: none;
+    outline: none;
+ }
+ 
+ .filters_cost input[type="radio"]:checked {
+   appearance: none;
+   outline: none;
+   content: none;
+   border: none;
+ }
+ 
+ .filters_cost input[type="radio"]:checked::before{
+   position: absolute;
+   color: rgb(0, 0, 0) !important;
+   content: "\00A0\2713\00A0" !important;
+   border: 1px solid #d3d3d3;
+   font-weight: bolder;
+   font-size: 13px;
+ }
+
+ .filters_colour input[type="radio"]{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 30px;
+    height: 30px;
+    content: none;
+    outline: none;
+ }
+ .filters_colour input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    content: none;
+    border: none;
+  }
+   .filters_colour input[type="radio"]:checked::before{
+   position: absolute;
+   color: rgb(0, 0, 0) !important;
+   content: "\00A0\2713\00A0" !important;
+   font-weight: bolder;
+   font-size: 13px;
+ }
+ #red{
+     background-color: lightcoral;
+ }
+ #blue{
+    background-color: lightblue;
+ }
+ #yellow{
+     background-color: lightyellow;
+ }
+ #green{
+    background-color: lightgreen;
+ }
+ #darkYellow{
+     background-color:lightseagreen;
+ }
+
+
+ .filters_design input[type="radio"]{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 20px;
+    height: 20px;
+    content: none;
+    outline: none;
+ }
+ 
+ .filters_design input[type="radio"]:checked {
+   appearance: none;
+   outline: none;
+   padding: 0;
+   content: none;
+   border: none;
+ }
+ 
+ .filters_design input[type="radio"]:checked::before{
+   position: absolute;
+   color: rgb(0, 0, 0) !important;
+   content: "\00A0\2713\00A0" !important;
+   border: 1px solid #d3d3d3;
+   font-weight: bolder;
+   font-size: 13px;
+ }
+ .filters_type input[type="radio"]{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 20px;
+    height: 20px;
+    content: none;
+    outline: none;
+ }
+ 
+ .filters_type input[type="radio"]:checked {
+   appearance: none;
+   outline: none;
+   padding: 0;
+   content: none;
+   border: none;
+ }
+ 
+ .filters_type input[type="radio"]:checked::before{
+   position: absolute;
+   color: rgb(0, 0, 0) !important;
+   content: "\00A0\2713\00A0" !important;
+   border: 1px solid #d3d3d3;
+   font-weight: bolder;
+   font-size: 15px;
+ }
+ .shoes_header{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     /* border: 2px solid red; */
+     padding: 1vh;
+ }
+ .shoes_header span{
+     font-size:19px ;
+ }
+ .sort_shoes{
+     /* border: 2px solid blue; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .sort_shoes button{
+     margin: 0;
+     margin-left: 1vh;
+     border: none;
+     color: black;
+     border: 1px solid black;
+     background-color: white;
+ }
+ .shoe_display{
+     display: flex;
+     /* border: 2px solid blue; */
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     /* height: 68vh; */
+     height: 100%;
+ }
+ .shoe_card{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     /* border: 2px solid green; */
+     height: 25vh;
+     width: 12vw;
+     margin: 2vh;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     /* justify-content: space-around; */
+     /* padding: 1vh; */
+ }
+ .shoe_inner{
+     /* border: 2px solid black; */
+     width: 80%;
+ }
+ .shoe_img_container{
+     height: 60%;
+ }
+ .shoe_img_container img{
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+ .shoe_name_container{
+     display: flex;
+     font-size: 18px;
+     align-items: center;
+     justify-content: flex-start;
+ }
+ .shoe_price{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-size: 15px;
+ }
+ .shoe_name_container span{
+     font-weight: 600;
+ }
+ .shoe_price span{
+     font-weight: 400;
+ }
+
+
+ .shoe_holder{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+    width: 70%;
+    flex-direction: column;
+ }
+ .shoe_holder1{
+     width: 95%;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     /* border: 2px solid black; */
+     padding: 1vh;
+     font-size: 23px;
+     font-weight: 6 00;
+ }
+ .shoe_holder1 span{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .shoe_holder2{
+     /* border: 2px solid black; */
+     width: 90%;
+     flex-direction: row;
+     display: flex;
+     /* display: flex; */
+     align-items: center;
+     justify-content: space-evenly;
+ }
+ .shoe_info{
+     
+     
+     /* border: 2px solid red; */
+     height: 56vh;
+ }
+ .shoe_info1{
+     width:40%;
+     height: 46vh;
+ }
+ .shoe_info1 img{
+     width: 100%;
+     height:100%;
+     object-fit: cover;
+ }
+ .shoe_info2{
+    width:20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+    justify-content: space-evenly;
+}
+.preview_image{
+    /* border: 2px solid black; */
+    width: 18vh;
+    height: 15vh;
+}
+.preview_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.shoe_info3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:30%;
+}
+.shoe_info3_1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    width: 100%;
+    /* padding-left: 1vh; */
+}
+.shoe_info_part{
+    /* border: 2px solid red; */
+    margin-bottom: 2vh;
+}
+.shoe_info_part span{
+    font-weight: 600;
+}
+.shoe_info_part p{
+    font-size: 12px;
+    font-weight: 400;
+}
+.shoe_info3_2 {
+    width: 100%;
+    /* border: 2px solid blue; */
+}
+.shoe_info3_2 input[type="radio"]{
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    width: 20px;
+    height: 20px;
+    content: none;
+    outline: none;
+ }
+ .shoe_info3_2 input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    content: none;
+    border: none;
+  }
+   .shoe_info3_2 input[type="radio"]:checked::before{
+   position: absolute;
+   color: rgb(0, 0, 0) !important;
+   content: "\00A0\2713\00A0" !important;
+   font-weight: bolder;
+   font-size: 13px;
+ }
+
+ .inputs_{
+     /* border: 2px solid black; */
+     width: 60%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 2vh;
+ } 
+ .inputs_{
+     font-weight: 600;
+ }
+
+ #red_{
+    background-color: rgb(251, 20, 20);
+}
+#blue_{
+   background-color: rgb(4, 190, 253);
+}
+#black_{
+    background-color: rgb(15, 14, 14);
+}
+
+.shoe_holder3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width:100%;
+    /* justify-content: center; */
+    /* padding: 1vh; */
+}
+.shoe_holder3 button{
+    margin: 1vh;
+    border: 1px solid;
+}
+#share{
+    /* width: 10vh; */
+    /* height: 1vh; */
+    background-color: white;
+    color:black;
+    border: 1px solid;
+}

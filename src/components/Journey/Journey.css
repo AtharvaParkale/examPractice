@@ -1,0 +1,60 @@
+.journey_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 84vh;
+}
+.journey_image{
+    /* border: 2px solid red; */
+    width: 80%;
+    height: 95%;
+    background-image: url("../../assets/grasspic.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* padding: 4vh; */
+}
+.journey_head{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid white; */
+    /* height: vh; */
+   
+}
+.journey_head span{
+    color: white;
+    /* border: 2px solid white; */
+    font-size: 60px;
+    font-weight: 400;
+}
+.journey_desc{
+    color: white;
+    /* border: 2px solid white; */
+    /* background-color: rgba(0, 0, 0, 0.695); */
+    width: 80%;
+    /* margin: 1vh; */
+    margin-bottom: 3vh;
+
+}
+.journey_desc span{
+    font-weight: 600;
+    font-size: 21px;
+}
+.desc_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.695);
+    /* margin: 1vh; */
+}
