@@ -6,7 +6,10 @@ function Home() {
   return (
     <>
     <Navbar/>
-    Home
+    <div className="home_section">
+      <h1>Project done by Atharva Parkale</h1>
+      <span>This website is not responsive, prefer opening it on PC</span>
+    </div>
     </>
   )
 }

@@ -7,17 +7,21 @@ import Data from './data.json';
 import img1 from '../../assets/shoe.jpg';
 import { FiChevronLeft } from 'react-icons/fi';
 import basic from "../../assets/sneakers/basic.jpg"
+import { FiShoppingBag } from 'react-icons/fi';
+import { GrLocation } from 'react-icons/gr';
 
 function Store() {
     const [priceLow, setPriceLow] = useState(0);
     const [priceHigh, setPriceHigh] = useState(20000);
     const [color, setColor] = useState("all");
+    const [type, setType] = useState("all");
     const [viewShoe, setViewShoe] = useState(true)
 
 
     //When ypu click on a shoe set these values
     const [shoeName, setShoeName] = useState("No shoe chosen");
     const [shoeCost, setShoeCost] = useState(0);
+    const [path, setPath] = useState("assets/sneakers/basic.jpg");
     const onSelectShoe = (shoeN, shoeC) => {
         console.log("Shoe name :" + shoeN);
         console.log("Shoe cost :" + shoeC);
@@ -25,15 +29,21 @@ function Store() {
         setShoeCost(shoeC);
     }
 
+    // const imageHoler=[]
+    const setImagePath = (p) => {
+        // console.log(p);
+    }
 
-    const filterItems = (pL, pH, c) => {
+    const filterItems = (pL, pH, c,z) => {
         // console.log("Price High: " + pH)
         // console.log("Price Low : " + pL)
         // console.log("Color : " + c)
+        console.log("type : " + z)
     }
     useEffect(() => {
-        filterItems(priceLow, priceHigh, color);
+        filterItems(priceLow, priceHigh, color,type);
         onSelectShoe(shoeName, shoeCost);
+        setImagePath(path);
     })
 
 
@@ -160,10 +170,17 @@ function Store() {
 
                                 <div className="filt_sections filters_type">
                                     <span>Type</span><br />
-                                    <input type="radio" id="loaf" name="shoe_type" value="loaf" />
+                                    <input type="radio" id="loaf" name="shoe_type" value="loaf" 
+                                    onChange={()=>{
+                                        setType("loafers")
+                                    }}/>
                                     <label for="loaf">Loafers</label><br />
 
-                                    <input type="radio" id="sneak" name="shoe_type" value="sneak" />
+                                    <input type="radio" id="sneak" name="shoe_type" value="sneak"
+                                       onChange={()=>{
+                                        setType("sneakers")
+                                    }}
+                                    />
                                     <label for="sneak">Sneakers</label><br />
                                 </div>
                                 {/* <button>Apply</button> */}
@@ -180,7 +197,7 @@ function Store() {
                                 <div className="shoe_display">
                                     {
                                         Data.map(item => {
-                                            if ((item.cost > priceLow) && (item.cost < priceHigh) && color === "all") {
+                                            if ((item.cost > priceLow) && (item.cost < priceHigh) && color === "all" ) {
                                                 return (
 
                                                     <div
@@ -205,7 +222,7 @@ function Store() {
                                                     </div>
                                                 )
                                             }
-                                            else if ((item.cost > priceLow) && (item.cost < priceHigh) && item.color === color) {
+                                            else if ((item.cost > priceLow) && (item.cost < priceHigh) && item.color === color ) {
                                                 return (
 
                                                     <div className="shoe_card">
@@ -222,12 +239,30 @@ function Store() {
                                                     </div>
                                                 )
                                             }
+                                        
+                                            
+
                                         })
 
                                     }
                                 </div>
                             </div>
-                            <div className="shoeInfo cart"></div>
+                            <div className="shoeInfo cart">
+                                <div className="cart_head">
+                                    <span>CART</span>
+                                    <FiShoppingBag />
+                                </div>
+                                <div className="cart_mid">
+                                    <p>What's stopping you designer ?</p>
+                                </div>
+                                <div className="cart_bottom1">
+                                    <span><GrLocation /> Home</span>
+                                    <span><FiShoppingBag /> Select Date</span>
+                                </div>
+                                <div className="cart_bottom2">
+                                    <button>order now</button>
+                                </div>
+                            </div>
                         </>) : (
                         <>
                             <div className="shoeInfo shoe_holder">
@@ -241,17 +276,17 @@ function Store() {
                                 </div>
                                 <div className="shoe_holder2">
                                     <div className="shoe_info shoe_info1">
-                                        <img src={basic} alt="shoe_img" />
+                                        <img src={path} alt="shoe_img" />
                                     </div>
                                     <div className="shoe_info shoe_info2">
                                         <div className="preview_image">
-                                            <img src={basic} alt="shoe_img" />
+                                            <img src={path} alt="shoe_img" />
                                         </div>
                                         <div className="preview_image">
-                                            <img src={basic} alt="shoe_img" />
+                                            <img src={path} alt="shoe_img" />
                                         </div>
                                         <div className="preview_image">
-                                            <img src={basic} alt="shoe_img" />
+                                            <img src={path} alt="shoe_img" />
                                         </div>
                                     </div>
                                     <div className="shoe_info shoe_info3">
@@ -274,71 +309,71 @@ function Store() {
                                                 <span>Front </span>
 
                                                 <div>
-                                                <input
-                                                    type="radio"
-                                                    id="black_"
-                                                    name="shoe_color"
-                                                    value="red"
-                                                    // onChange={() => {
-                                                    //     setColor("red");
-                                                    // }}
+                                                    <input
+                                                        type="radio"
+                                                        id="black_"
+                                                        name="shoe_front"
+                                                        value="assets/sneakers/front/front1.jpg"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/front/front1.jpg");
+                                                        }}
 
-                                                />
-                                                <input
-                                                    type="radio"
-                                                    id="blue_"
-                                                    name="shoe_color"
-                                                    value="blue"
-                                                    // onChange={() => {
-                                                    //     setColor("blue");
-                                                    // }}
-                                                />
+                                                    />
+                                                    <input
+                                                        type="radio"
+                                                        id="blue_"
+                                                        name="shoe_front"
+                                                        value="blue"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/front/front3.jpg");
+                                                        }}
+                                                    />
 
-                                                <input
-                                                    type="radio"
-                                                    id="red_"
-                                                    name="shoe_color"
-                                                    value="yellow"
-                                                    // onChange={() => {
-                                                    //     setColor("yellow");
-                                                    // }}
-                                                />
-                                               </div>
+                                                    <input
+                                                        type="radio"
+                                                        id="red_"
+                                                        name="shoe_front"
+                                                        value="yellow"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/front/front2.jpg");
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
                                             <div className="inputs_ middle_edit">
                                                 <span>Middle  </span>
                                                 <div>
-                                                <input
-                                                    type="radio"
-                                                    id="black_"
-                                                    name="shoe_color"
-                                                    value="red"
-                                                    // onChange={() => {
-                                                    //     setColor("red");
-                                                    // }}
+                                                    <input
+                                                        type="radio"
+                                                        id="black_"
+                                                        name="shoe_middle"
+                                                        value="red"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/middle/sneaker5.jpg");
+                                                        }}
 
-                                                />
-                                                <input
-                                                    type="radio"
-                                                    id="blue_"
-                                                    name="shoe_color"
-                                                    value="blue"
-                                                    // onChange={() => {
-                                                    //     setColor("blue");
-                                                    // }}
-                                                />
+                                                    />
+                                                    <input
+                                                        type="radio"
+                                                        id="blue_"
+                                                        name="shoe_middle"
+                                                        value="blue"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/middle/sneaker6.jpg");
+                                                        }}
+                                                    />
 
-                                                <input
-                                                    type="radio"
-                                                    id="red_"
-                                                    name="shoe_color"
-                                                    value="yellow"
-                                                    // onChange={() => {
-                                                    //     setColor("yellow");
-                                                    // }}
-                                                />
-                                               </div>
+                                                    <input
+                                                        type="radio"
+                                                        id="red_"
+                                                        name="shoe_middle"
+                                                        value="yellow"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/middle/sneaker1.jpg");
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
 
@@ -346,147 +381,99 @@ function Store() {
                                             <div className="inputs_ back_edit">
                                                 <span>Back  </span>
                                                 <div>
-                                                <input
-                                                    type="radio"
-                                                    id="black_"
-                                                    name="shoe_color"
-                                                    value="red"
-                                                    // onChange={() => {
-                                                    //     setColor("red");
-                                                    // }}
+                                                    <input
+                                                        type="radio"
+                                                        id="black_"
+                                                        name="shoe_back"
+                                                        value="red"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/back/sneaker8.jpg");
+                                                        }}
 
-                                                />
-                                                <input
-                                                    type="radio"
-                                                    id="blue_"
-                                                    name="shoe_color"
-                                                    value="blue"
-                                                    // onChange={() => {
-                                                    //     setColor("blue");
-                                                    // }}
-                                                />
+                                                    />
+                                                    <input
+                                                        type="radio"
+                                                        id="blue_"
+                                                        name="shoe_back"
+                                                        value="blue"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/back/sneaker9.jpg");
+                                                        }}
+                                                    />
 
-                                                <input
-                                                    type="radio"
-                                                    id="red_"
-                                                    name="shoe_color"
-                                                    value="yellow"
-                                                    // onChange={() => {
-                                                    //     setColor("yellow");
-                                                    // }}
-                                                />
-                                               </div>
+                                                    <input
+                                                        type="radio"
+                                                        id="red_"
+                                                        name="shoe_back"
+                                                        value="yellow"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/back/sneaker7.jpg");
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
 
 
                                             <div className="inputs_ front_edit">
-                                                <span>Front  </span>
+                                                <span>Inner  </span>
                                                 <div>
-                                                <input
-                                                    type="radio"
-                                                    id="black_"
-                                                    name="shoe_color"
-                                                    value="red"
-                                                    // onChange={() => {
-                                                    //     setColor("red");
-                                                    // }}
+                                                    <input
+                                                        type="radio"
+                                                        id="black_"
+                                                        name="shoe_inner"
+                                                        value="red"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/inner/sneaker4.jpg");
+                                                        }}
 
-                                                />
-                                                <input
-                                                    type="radio"
-                                                    id="blue_"
-                                                    name="shoe_color"
-                                                    value="blue"
-                                                    // onChange={() => {
-                                                    //     setColor("blue");
-                                                    // }}
-                                                />
+                                                    />
+                                                    <input
+                                                        type="radio"
+                                                        id="blue_"
+                                                        name="shoe_inner"
+                                                        value="blue"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/inner/sneaker2.jpg");
+                                                        }}
+                                                    />
 
-                                                <input
-                                                    type="radio"
-                                                    id="red_"
-                                                    name="shoe_color"
-                                                    value="yellow"
-                                                    // onChange={() => {
-                                                    //     setColor("yellow");
-                                                    // }}
-                                                />
-                                               </div>
+                                                    <input
+                                                        type="radio"
+                                                        id="red_"
+                                                        name="shoe_inner"
+                                                        value="yellow"
+                                                        onChange={() => {
+                                                            setPath("assets/sneakers/inner/sneaker3.jpg");
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
-
-
-
-                                            <div className="inputs_ sole_edit">
-                                                <span>Sole  </span>
-                                                <div>
-                                                <input
-                                                    type="radio"
-                                                    id="black_"
-                                                    name="shoe_color"
-                                                    value="red"
-                                                    // onChange={() => {
-                                                    //     setColor("red");
-                                                    // }}
-
-                                                />
-                                                <input
-                                                    type="radio"
-                                                    id="blue_"
-                                                    name="shoe_color"
-                                                    value="blue"
-                                                    // onChange={() => {
-                                                    //     setColor("blue");
-                                                    // }}
-                                                />
-
-                                                <input
-                                                    type="radio"
-                                                    id="red_"
-                                                    name="shoe_color"
-                                                    value="yellow"
-                                                    // onChange={() => {
-                                                    //     setColor("yellow");
-                                                    // }}
-                                                />
-                                               </div>
-                                            </div>
-
-
 
                                             <div className="inputs_ size_edit">
                                                 <span>Size  </span>
                                                 <div>
-                                                <input
-                                                    type="radio"
-                                                    id="black_"
-                                                    name="shoe_color"
-                                                    value="red"
-                                                    // onChange={() => {
-                                                    //     setColor("red");
-                                                    // }}
+                                                    <input
+                                                        type="radio"
+                                                        name="shoe_size"
+                                                        value="red"
 
-                                                />
-                                                <input
-                                                    type="radio"
-                                                    id="blue_"
-                                                    name="shoe_color"
-                                                    value="blue"
-                                                    // onChange={() => {
-                                                    //     setColor("blue");
-                                                    // }}
-                                                />
 
-                                                <input
-                                                    type="radio"
-                                                    id="red_"
-                                                    name="shoe_color"
-                                                    value="yellow"
-                                                    // onChange={() => {
-                                                    //     setColor("yellow");
-                                                    // }}
-                                                />
-                                               </div>
+                                                    />
+                                                    <input
+                                                        type="radio"
+                                                        name="shoe_size"
+                                                        value="blue"
+
+                                                    />
+
+                                                    <input
+                                                        type="radio"
+                                                        name="shoe_size"
+                                                        value="yellow"
+
+                                                    />
+                                                </div>
                                             </div>
 
                                         </div>
@@ -497,7 +484,22 @@ function Store() {
                                     <button id="addToCart">add to cart</button>
                                 </div>
                             </div>
-                            <div className="shoeInfo cart"></div>
+                            <div className="shoeInfo cart">
+                                <div className="cart_head">
+                                    <span>CART</span>
+                                    <FiShoppingBag />
+                                </div>
+                                <div className="cart_mid">
+                                    <p>What's stopping you designer ?</p>
+                                </div>
+                                <div className="cart_bottom1">
+                                    <span><GrLocation /> Home</span>
+                                    <span><FiShoppingBag /> Select Date</span>
+                                </div>
+                                <div className="cart_bottom2">
+                                    <button>order now</button>
+                                </div>
+                            </div>
                         </>
                     )
                 }

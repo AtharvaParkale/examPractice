@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import "./Contact.css"
+import instagram from "../../assets/insta.svg"
+import facebook from "../../assets/facebook.svg"
+import twitter from "../../assets/twitter.svg"
 
 function Contact() {
     return (
@@ -28,6 +31,24 @@ function Contact() {
                         </div>
                     </div>
 
+
+                </div>
+                <div className="contactCard_social">
+                    <div className="social_part1">
+                        <p>stay in touch</p>
+                    </div>
+                    <div className="social_part1">
+                        <div className="icon_holder">
+                            <img src={ twitter} alt="twitter" />
+                        </div>
+                        <div className="icon_holder">
+                            <img src={instagram} alt="twitter" />
+                        </div>
+                        <div className="icon_holder">
+                            <img src={facebook} alt="twitter" />
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

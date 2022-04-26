@@ -6,7 +6,8 @@
         "cost" : 2000,
         "star":4,
         "color":"red",
-        "image":"../../assets/shoe2.png"
+        "image":"../../assets/shoe2.png",
+        "type":"loafers"
         
     },
     {
@@ -15,7 +16,8 @@
         "cost" : 8000,
         "star":4,
         "color":"blue",
-        "image":"../../assets/shoe.jpg"
+        "image":"../../assets/shoe.jpg",
+        "type":"loafers"
        
     },
     {
@@ -24,7 +26,8 @@
         "cost" : 6000,
         "star":3,
         "color":"red",
-        "image":"../../assets/shoe2.png"
+        "image":"../../assets/shoe2.png",
+        "type":"loafers"
         
       
     },
@@ -34,7 +37,8 @@
         "cost" : 3500,
         "star":4,
         "color":"blue",
-        "image":"../../assets/shoe.jpg"
+        "image":"../../assets/shoe.jpg",
+        "type":"sneakers"
        
        
     }, 
@@ -44,7 +48,8 @@
         "cost" : 9000,
         "star":4,
         "color":"yellow",
-        "image":"../../assets/shoe2.png"
+        "image":"../../assets/shoe2.png",
+        "type":"sneakers"
        
        
     }, 
@@ -54,7 +59,8 @@
         "cost" : 5500,
         "star":5,
         "color":"yellow",
-        "image":"../../assets/shoe.jpg"
+        "image":"../../assets/shoe.jpg",
+        "type":"sneakers"
         
     } 
 ]

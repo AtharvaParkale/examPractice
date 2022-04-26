@@ -221,6 +221,10 @@
      /* justify-content: space-around; */
      /* padding: 1vh; */
  }
+ .shoe_card:hover{
+    height: 25.5vh;
+    width: 12.5vw;
+ }
  .shoe_inner{
      /* border: 2px solid black; */
      width: 80%;
@@ -410,4 +414,54 @@
     background-color: white;
     color:black;
     border: 1px solid;
+}
+.cart{
+    /* border: 2px solid black; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.cart_head{
+    height: 10%;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    /* border: 2px solid red; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+.cart_mid{
+    height: 75%;
+    width: 80%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart_bottom1{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+    height: 5%;
+    width: 100%;
+    color: grey;
+}
+.cart_bottom2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    height: 10%;
+    width: 80%;
+}
+.cart_bottom2 button{
+    padding: none;
+    height: 55%;
+    background-color: grey;
 }
